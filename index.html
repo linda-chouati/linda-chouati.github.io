@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" media="all" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logoFond2.png" />
+
+    <title>Chouati Linda - Portfolio </title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Chouati Linda</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos de moi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="content">
+
+        <header id="home" class="py-5 text-center bg-gradient">
+            <div class="container">
+                <h1 class="display-2 font-weight-bold mb-3 animate__animated animate__fadeIn text-shadow">LINDA CHOUATI</h1>
+                <h3 class="lead mb-3 animate__animated animate__fadeIn animate__delay-1s text-shadow">Étudiante en Master Informatique</h3>
+                <h3 class="font-italic mb-5 animate__animated animate__fadeIn animate__delay-2s text-shadow">
+                    <em>"Le talent est un cadeau, mais la persévérance est un choix."</em>
+                </h3>
+            </div>
+        </header>
+
+        <!-- Section À propos de moi -->
+        <section id="about" class="about-me py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Photo -->
+                    <!-- <div class="col-md-12 d-flex justify-content-center mb-4">
+                        <div class="profile-image-wrapper">
+                            <img src="assets/moi.png" alt="Votre Photo" class="img-fluid rounded shadow">
+                        </div>
+                    </div> -->
+
+                    <!-- Description générale -->
+                    <div class="col-md-12">
+                        <h2 class="display-4">À propos de moi</h2><br>
+                        <p>
+                            Ce qui m'attire dans l'intelligence artificielle, c'est sa capacité à apporter des réponses nouvelles à des problèmes complexes. Ce domaine, avec ses défis techniques, stimule ainsi ma curiosité.
+                        </p>
+                        <p>
+                            Mais au-delà du code, je crois aussi à l'impact humain. C'est pourquoi le bénévolat fait partie intégrante de mon parcours : apprendre, comprendre et aider sont pour moi des moteurs essentiels.
+                        </p>
+                        <p>
+                            Développement logiciel, IA explicable, création de modèles d'apprentissage… Ces compétences sont les outils avec lesquels j'essaie de construire un monde plus intelligent, mais aussi plus accessible et plus humain.
+                        </p>
+                        <br><br>
+
+                        <!-- Formation et Certificats -->
+                        <div class="formation-certificats">
+                            <h4>Formation et Certificats</h4><br>
+                            <ul>
+                                <li><strong>Master en Informatique :</strong> En cours - Université Claude Bernard Lyon 1 </li>
+                                <li><strong>Licence en Informatique :</strong> Université Claude Bernard Lyon 1</li>
+                                <li><strong>Baccalauréat Scientifique (spé Physique) :</strong> Lycée du Parc</li>
+                                <!-- <li><strong>Spécialisation en Apprentissage Automatique (Machine Learning) :</strong> Stanford University et DeepLearning.AI (Coursera)</li> -->
+                            </ul>
+                        </div>
+
+                        <br>
+
+                        <!-- Télécharger CV -->
+                        <div class="mt-4 text-center">
+                            <a href="assets/cvLinda.pdf" class="btn btn-primary" download>
+                                Télécharger mon CV
+                            </a>
+                        </div>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="skills" class="py-5">
+            <div class="container">
+                <h2 class="display-4 text-center mb-4">Compétences</h2>
+                <div id="skills-timeline"></div>
+            </div>
+        </section>
+        
+        
+
+
+        <!-- Section Projets -->
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h1 class="text-center mb-5">Mes Projets</h1>
+                <div id="projects-container" class="row g-4 justify-content-center">
+                    <!-- Cartes des projets générées par JavaScript -->
+                </div>
+            </div>
+        </section>
+                
+                
+
+
+        <!-- Section Contact -->
+        <section id="contact" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="display-4 text-center mb-5">Contact</h2>
+                <div class="row justify-content-center">
+                    <!-- Formulaire de contact -->
+                    <div class="col-md-6 mb-4">
+                        <h4 class="text-center mb-4">Envoyez-moi un message</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Sujet du message" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Votre message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center mt-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h4 class="mb-4">Suivez-moi</h4>
+                        <div class="d-flex">
+                            <a href="https://www.linkedin.com/in/linda-chouati-8636a1162/" target="_blank" class="mr-3">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                            <a href="https://github.com/lindoushmim" target="_blank" class="mr-3">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                            <a href="mailto:linda.chouati@outlook.fr" target="_blank" class="mr-3">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Chouati Linda. Tous droits réservés.</p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

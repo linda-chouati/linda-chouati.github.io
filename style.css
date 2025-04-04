@@ -1,0 +1,365 @@
+/* -------------------- GLOBAL -------------------- */
+
+/* Assurez-vous que le html et le body occupent toute la hauteur */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Structure principale pour tout centrer verticalement */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenu principal prend tout l'espace disponible */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------- EN-TÊTE -------------------- */
+
+#home {
+    background-image: url('assets/ia.png');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dégradé de fond pour l'en-tête */
+.bg-gradient {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Ombre pour le texte */
+.text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour les titres */
+.display-2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.lead {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 1000;
+    font-size: 1.5rem;
+}
+
+.font-italic {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+
+.custom-navbar {
+    background-color: #000 !important;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.custom-navbar .navbar-brand {
+    color: white !important;
+}
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* -------------------- SECTION À PROPOS -------------------- */
+
+.about-me {
+    padding: 40px 0;
+    border-top: 2px solid #007bff;
+}
+
+.about-me h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-me ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-me ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-me .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.about-me .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Styles pour la photo de profil */
+.profile-image-wrapper {
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------- FORMATION -------------------- */
+
+.formation-certificats ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.formation-certificats ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* -------------------- COMPÉTENCES -------------------- */
+
+
+#skills-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    width: 280px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: #f1f5f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.skill-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tag {
+    padding: 6px 12px;
+    background: #3b82f6;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tag:hover {
+    background: #1d4ed8;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .skill-card {
+        width: 220px;
+    }
+}
+
+
+/* -------------------- SECTION PROJETS -------------------- */
+/* Section Générale */
+#projects {
+    background: #f1f5f9;
+    padding: 60px 0;
+}
+
+/* Conteneur des cartes */
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Carte Projet agrandie */
+.project-card {
+    width: 350px;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    perspective: 1000px;
+    transition: transform 0.6s, box-shadow 0.6s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Faces des cartes */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Face avant avec un beige doux */
+.card-front {
+    background: #f8f5f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.card-front img {
+    width: 100%;
+    height: 75%;
+    object-fit: contain;  /* Affiche l'image en entier sans la couper */
+    background-color: #f0f0f0; /* Couleur de fond pour combler les vides */
+    border-radius: 10px;
+    object-position: center;
+}
+
+
+.card-front h3 {
+    margin-top: auto;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #2d3748;
+    text-align: center;
+}
+
+/* Face arrière avec bleu nuit élégant */
+.card-back {
+    background: #1e2a38;
+    color: #fff;
+    transform: rotateY(180deg) scaleX(-1); /* Inverse le texte pour corriger le flip */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Badges de technologies */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.tech-badge {
+    padding: 6px 14px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4a5568, #718096);
+    color: #fff;
+    font-weight: 500;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tech-badge:hover {
+    background: linear-gradient(135deg, #2b6cb0, #2c5282);
+    transform: scale(1.1);
+}
+
+/* Bouton stylisé */
+.card-back a {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-back a:hover {
+    background: linear-gradient(135deg, #2b6cb0, #2c5282);
+    transform: scale(1.05);
+}
+
+.card-back p, .card-back a, .tech-badges {
+    transform: scaleX(-1); /* Ré-inverse le contenu pour une lecture normale */
+}
