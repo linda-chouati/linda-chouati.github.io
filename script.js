@@ -1,6 +1,3 @@
-
-//// partie projets 
-
 const projects = [
     {
         title: "Reconnaissance de Langage des Signes",
@@ -59,60 +56,87 @@ const projects = [
         link: "https://github.com/lindoushmim/sokoban"
     }
 ];
+// ------- rendering dynamique & filtres -------
+(() => {
+  const data = projects; // ton tableau existant
 
-const container = document.getElementById('projects-container');
+  const grid = document.getElementById('projectsGrid');
+  const filtersWrap = document.getElementById('projFilters');
+  const searchInput = document.getElementById('projSearch');
 
-projects.forEach(project => {
-    const card = document.createElement('div');
-    card.className = 'project-card';
+  // tags uniques (à partir des technologies)
+  const tags = Array.from(new Set(data.flatMap(p => p.technologies))).sort();
+  const active = { tag: 'Tous', q: '' };
 
-    card.innerHTML = `
-        <div class="card-inner">
-            <div class="card-front">
-                <img src="${project.image}" alt="${project.title}">
-                <h3>${project.title}</h3>
-            </div>
-            <div class="card-back">
-                <p>${project.description}</p>
-                <div class="tech-badges">
-                    ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
-                </div>
-                <a href="${project.link}" target="_blank">Voir le projet</a>
-            </div>
-        </div>
+  // UI filtres
+  const makePill = (label) => {
+    const b = document.createElement('button');
+    b.className = 'pill' + (label==='Tous' ? ' is-active' : '');
+    b.textContent = label;
+    b.addEventListener('click', () => {
+      active.tag = label;
+      document.querySelectorAll('.pill').forEach(x=>x.classList.remove('is-active'));
+      b.classList.add('is-active');
+      render();
+    });
+    return b;
+  };
+
+  filtersWrap.appendChild(makePill('Tous'));
+  tags.forEach(t => filtersWrap.appendChild(makePill(t)));
+
+  searchInput.addEventListener('input', (e) => { active.q = e.target.value.trim().toLowerCase(); render(); });
+
+  function passFilters(p){
+    const byTag = (active.tag==='Tous') || p.technologies.includes(active.tag);
+    const q = active.q;
+    const bySearch = !q || (p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.technologies.join(' ').toLowerCase().includes(q));
+    return byTag && bySearch;
+  }
+
+  function card(p, idx){
+    const li = document.createElement('article');
+    li.className = 'project-card pro' + (idx===0 ? ' featured' : '');
+
+    // cover
+    const a = document.createElement('a');
+    a.className = 'cover';
+    a.href = p.link; a.target = '_blank'; a.rel = 'noreferrer';
+    a.innerHTML = `
+      <img src="${p.image}" alt="${p.title}">
+      <span class="cover-badge">Open source</span>
     `;
-    container.appendChild(card);
-});
+    li.appendChild(a);
 
-
-/// partie compétences 
-
-const skills = [
-    { title: "Langages de Programmation", details: ["C/C++", "Java", "Python", "Netlogo"] },
-    { title: "Machine Learning & Data Science", details: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "Scikit-Learn"] },
-    { title: "Bases de Données", details: ["SQL", "MySQL", "Datalog", "Doctrine"] },
-    { title: "Développement Web", details: ["JavaScript", "HTML", "CSS", "PHP", "Symfony", "Bootstrap"] },
-    { title: "Développement Collaboratif", details: ["GitHub", "GitLab"] },
-    { title: "Gestion de Projet", details: ["Méthodes Agiles", "Scrum"] },
-    { title: "Qualités Personnelles", details: ["Curiosité", "Esprit d'équipe", "Autonomie", "Organisation"] },
-    { title: "Langues", details: ["Français", "Anglais", "Allemand"] }
-];
-
-const timelineContainer = document.getElementById('skills-timeline');
-
-skills.forEach(skill => {
-    const skillCard = document.createElement('div');
-    skillCard.className = 'skill-card';
-    
-    skillCard.innerHTML = `
-        <div class="skill-content">
-            <h3>${skill.title}</h3>
-            <div class="skill-tags">
-                ${skill.details.map(detail => `<span class="tag">${detail}</span>`).join('')}
-            </div>
-        </div>
+    // body
+    const body = document.createElement('div');
+    body.className = 'body';
+    body.innerHTML = `
+      <h3>${p.title}</h3>
+      <p>${p.description || ''}</p>
     `;
-    
-    timelineContainer.appendChild(skillCard);
-});
+    // chips
+    const chips = document.createElement('div');
+    chips.className = 'chips';
+    (p.technologies||[]).forEach(t=>{
+      const s = document.createElement('span'); s.className='chip'; s.textContent=t; chips.appendChild(s);
+    });
+    body.appendChild(chips);
 
+    // actions
+    const act = document.createElement('div'); act.className='actions';
+    const code = document.createElement('a'); code.className='btn-sm'; code.textContent='Code'; code.href=p.link; code.target='_blank'; code.rel='noreferrer';
+    act.appendChild(code);
+    body.appendChild(act);
+
+    li.appendChild(body);
+    return li;
+  }
+
+  function render(){
+    grid.innerHTML = '';
+    data.filter(passFilters).forEach((p,i)=> grid.appendChild(card(p,i)));
+  }
+
+  render();
+})();

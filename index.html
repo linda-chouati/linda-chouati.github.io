@@ -1,203 +1,319 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" media="all" type="text/css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/logoFond2.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linda Chouati — M2 Informatique (IA) | Portfolio</title>
+  <meta name="description" content="Étudiante M2 Informatique (IA) à l'UCBL. Projets en Deep Learning, Vision, NLP & XAI. Disponible pour un stage de fin d'études.">
+  <meta property="og:title" content="Linda Chouati — IA Portfolio">
+  <meta property="og:description" content="Projets IA (Vision, NLP, XAI) + démos & code. Disponible pour stage.">
+  <meta property="og:type" content="website">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logoFond2.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
 
-    <title>Chouati Linda - Portfolio </title>
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <script src="script.js" defer></script>
-
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Linda Chouati",
+    "description":"Étudiante M2 Informatique (IA). Projets Vision, NLP, XAI.",
+    "sameAs":["https://github.com/lindoushmim","https://www.linkedin.com/in/linda-chouati-8636a1162/"]
+  }
+  </script>
 </head>
-
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Chouati Linda</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="logo">Linda Chouati</a>
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="cta-link" href="https://github.com/lindoushmim" target="_blank" rel="noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">À propos de moi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Compétences</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+  <!-- ===== Hero ===== -->
+  <header id="home" class="hero hero-elegant">
+    <!-- halo décoratif -->
+    <svg class="hero-ornament" viewBox="0 0 600 600" aria-hidden="true">
+      <defs>
+        <linearGradient id="goldFade" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#d6b25e"/>
+          <stop offset="100%" stop-color="#b9922a"/>
+        </linearGradient>
+        <radialGradient id="soft" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#f4efe3" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="300" cy="300" r="260" fill="url(#soft)"/>
+      <path d="M120,340 C180,200 360,180 460,260 C520,308 520,420 436,464 C340,514 190,480 140,420 C100,372 92,400 120,340 Z"
+            fill="url(#goldFade)" opacity=".18"/>
+      <path d="M160,210 C230,160 380,160 430,220 C470,268 420,330 350,340 C290,348 210,300 160,260 Z"
+            stroke="#c9a227" stroke-opacity=".25" stroke-width="1.2" fill="none"/>
+    </svg>
 
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <span class="hero-badge">En recherche de stage de fin d’études</span>
+        <h1 class="hero-title">LINDA CHOUATI</h1>
+        <p class="subtitle">Étudiante en Master 2 Informatique — IA</p>
+        <div class="divider"></div>
+        <blockquote class="quote">« Le talent est un cadeau, mais la persévérance est un choix. »</blockquote>
+        <br>
+
+        <!-- tags stack/domaines -->
+        <div class="hero-tags">
+          <span>Python</span><span>PyTorch</span><span>OpenCV</span>
+          <span>NLP</span><span>Vision</span><span>XAI</span>
         </div>
-    </nav>
 
-    <!-- Contenu principal -->
-    <div class="content">
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+          <a href="assets/cvLinda.pdf" class="btn btn-ghost" download>📄 Télécharger mon CV</a>
+        </div>
+        <br>
 
-        <header id="home" class="py-5 text-center bg-gradient">
-            <div class="container">
-                <h1 class="display-2 font-weight-bold mb-3 animate__animated animate__fadeIn text-shadow">LINDA CHOUATI</h1>
-                <h3 class="lead mb-3 animate__animated animate__fadeIn animate__delay-1s text-shadow">Étudiante en Master Informatique</h3>
-                <h3 class="font-italic mb-5 animate__animated animate__fadeIn animate__delay-2s text-shadow">
-                    <em>"Le talent est un cadeau, mais la persévérance est un choix."</em>
-                </h3>
-            </div>
-        </header>
+        <ul class="hero-stats">
+          <li><strong>8+</strong><span>projets publiés</span></li>
+          <li><strong>3</strong><span>domaines : IA, Vision, NLP</span></li>
+          <li><strong>Fév–Août 2026</strong><span>Stage fin d’études — Lyon/Remote</span></li>
+        </ul>
+      </div>
 
-        <!-- Section À propos de moi -->
-        <section id="about" class="about-me py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Photo -->
-                    <!-- <div class="col-md-12 d-flex justify-content-center mb-4">
-                        <div class="profile-image-wrapper">
-                            <img src="assets/moi.png" alt="Votre Photo" class="img-fluid rounded shadow">
-                        </div>
-                    </div> -->
+      <div class="hero-right">
+        <div class="feature-card photo-card">
+        <img src="assets/moi.png" alt="Photo de Linda Chouati" class="portrait" loading="lazy">
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
 
-                    <!-- Description générale -->
-                    <div class="col-md-12">
-                        <h2 class="display-4">À propos de moi</h2><br>
-                        <p>
-                            Ce qui m'attire dans l'intelligence artificielle, c'est sa capacité à apporter des réponses nouvelles à des problèmes complexes. Ce domaine, avec ses défis techniques, stimule ainsi ma curiosité.
-                        </p>
-                        <p>
-                            Mais au-delà du code, je crois aussi à l'impact humain. C'est pourquoi le bénévolat fait partie intégrante de mon parcours : apprendre, comprendre et aider sont pour moi des moteurs essentiels.
-                        </p>
-                        <p>
-                            Développement logiciel, IA explicable, création de modèles d'apprentissage… Ces compétences sont les outils avec lesquels j'essaie de construire un monde plus intelligent, mais aussi plus accessible et plus humain.
-                        </p>
-                        <br><br>
-
-                        <!-- Formation et Certificats -->
-                        <div class="formation-certificats">
-                            <h4>Formation et Certificats</h4><br>
-                            <ul>
-                                <li><strong>Master en Informatique :</strong> En cours - Université Claude Bernard Lyon 1 </li>
-                                <li><strong>Licence en Informatique :</strong> Université Claude Bernard Lyon 1</li>
-                                <li><strong>Baccalauréat Scientifique (spé Physique) :</strong> Lycée du Parc</li>
-                                <!-- <li><strong>Spécialisation en Apprentissage Automatique (Machine Learning) :</strong> Stanford University et DeepLearning.AI (Coursera)</li> -->
-                            </ul>
-                        </div>
-
-                        <br>
-
-                        <!-- Télécharger CV -->
-                        <div class="mt-4 text-center">
-                            <a href="assets/cvLinda.pdf" class="btn btn-primary" download>
-                                Télécharger mon CV
-                            </a>
-                        </div>
-                        <br>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Compétences -->
-        <section id="skills" class="py-5">
-            <div class="container">
-                <h2 class="display-4 text-center mb-4">Compétences</h2>
-                <div id="skills-timeline"></div>
-            </div>
-        </section>
-        
-        
-
-
-        <!-- Section Projets -->
-        <section id="projects" class="py-5">
-            <div class="container">
-                <h1 class="text-center mb-5">Mes Projets</h1>
-                <div id="projects-container" class="row g-4 justify-content-center">
-                    <!-- Cartes des projets générées par JavaScript -->
-                </div>
-            </div>
-        </section>
-                
-                
-
-
-        <!-- Section Contact -->
-        <section id="contact" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="display-4 text-center mb-5">Contact</h2>
-                <div class="row justify-content-center">
-                    <!-- Formulaire de contact -->
-                    <div class="col-md-6 mb-4">
-                        <h4 class="text-center mb-4">Envoyez-moi un message</h4>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Nom</label>
-                                <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Votre email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Sujet</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Sujet du message" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Votre message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
-                        </form>
-                    </div>
-                </div>
-                <br>
-                <div class="row justify-content-center mt-4">
-                    <div class="d-flex flex-column align-items-center">
-                        <h4 class="mb-4">Suivez-moi</h4>
-                        <div class="d-flex">
-                            <a href="https://www.linkedin.com/in/linda-chouati-8636a1162/" target="_blank" class="mr-3">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                            <a href="https://github.com/lindoushmim" target="_blank" class="mr-3">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                            <a href="mailto:linda.chouati@outlook.fr" target="_blank" class="mr-3">
-                                <i class="fas fa-envelope fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Faites défiler</span>
+      <i class="chevron">⌄</i>
     </div>
 
+    <svg class="wave-sep" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" fill="#f7f7f7"></path>
+    </svg>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Chouati Linda. Tous droits réservés.</p>
-    </footer>
+    <!-- ===== À propos ===== -->
+    <section id="about" class="section about-section">
+    <div class="container">
+        <h2 class="text-center">À propos de moi</h2>
+        <div class="about-card">
+        <p>
+            Passionnée par l’intelligence artificielle, j’aime relever des défis techniques 
+            tout en gardant à cœur l’impact humain. Développement logiciel, IA explicable, 
+            apprentissage automatique… autant d’outils pour construire un monde plus intelligent, 
+            plus accessible et plus humain.
+        </p>
+        </div>
+
+        <h3 class="text-center">🎓 Formation & Certifications</h3>
+        <div class="timeline">
+
+        <div class="timeline-item">
+            <span class="icon">🎓</span>
+            <p><strong>Master en Intelligence Artificielle</strong> — Université Claude Bernard Lyon 1</p>
+            <br>
+        </div>
+
+        <div class="timeline-item">
+            <span class="icon">📜</span>
+            <p><strong>Supervised Machine Learning: Regression and Classification</strong><br>
+            Coursera (DeepLearning.AI & Stanford University) <br>
+            </p>
+            <br>
+        </div>
+
+        <div class="timeline-item">
+            <span class="icon">🖥️</span>
+            <p><strong>Licence en Informatique</strong> — Université Claude Bernard Lyon 1</p>
+            <br>
+        </div>
+
+        <div class="timeline-item">
+            <span class="icon">📘</span>
+            <p><strong>Baccalauréat Scientifique (spé Physique)</strong> — Lycée du Parc</p>
+        </div>
+
+        </div>
+
+        <div class="text-center">
+        <a href="assets/cvLinda.pdf" class="btn-outline" download>📄 Télécharger mon CV</a>
+        </div>
+    </div>
+    </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- ===== Compétences ===== -->
+<section id="skills" class="section bg-light">
+  <div class="container">
+    <h2 class="text-center">Compétences</h2>
+
+    <div class="skills-grid pro">
+      <!-- Langages -->
+      <article class="skill-card pro">
+        <header>
+          <i class="fa-solid fa-code"></i>
+          <h3>Langages</h3>
+        </header>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">C/C++</span>
+          <span class="chip">Java</span>
+          <span class="chip">NetLogo</span>
+        </div>
+      </article>
+
+      <!-- Machine Learning -->
+      <article class="skill-card pro">
+        <header>
+          <i class="fa-solid fa-robot"></i>
+          <h3>Machine Learning</h3>
+        </header>
+        <div class="chips">
+          <span class="chip">PyTorch</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">Scikit‑learn</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">NumPy</span>
+        </div>
+      </article>
+
+      <!-- Bases de données -->
+      <article class="skill-card pro">
+        <header>
+          <i class="fa-solid fa-database"></i>
+          <h3>Bases de données</h3>
+        </header>
+        <div class="chips">
+          <span class="chip">SQL</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Datalog</span>
+          <span class="chip">Doctrine</span>
+        </div>
+      </article>
+
+      <!-- Dév Web -->
+      <article class="skill-card pro">
+        <header>
+          <i class="fa-solid fa-globe"></i>
+          <h3>Développement Web</h3>
+        </header>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">PHP</span>
+          <span class="chip">Symfony</span>
+        </div>
+      </article>
+
+      <!-- Outils & Gestion -->
+      <article class="skill-card pro">
+        <header>
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h3>Outils & Gestion</h3>
+        </header>
+        <div class="chips">
+          <span class="chip">GitHub</span>
+          <span class="chip">GitLab</span>
+          <span class="chip">Agile</span>
+          <span class="chip">Scrum</span>
+        </div>
+      </article>
+
+      <!-- Langues -->
+      <article class="skill-card pro">
+        <header>
+          <i class="fa-solid fa-language"></i>
+          <h3>Langues</h3>
+        </header>
+        <div class="chips">
+          <span class="chip">Français</span>
+          <span class="chip">Anglais</span>
+          <span class="chip">Allemand</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 
+
+<!-- ===== Projets ===== -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="text-center">Mes Projets</h2>
+
+    <!-- barre outils (recherche + filtres auto) -->
+    <div class="proj-toolbar">
+      <input id="projSearch" type="search" placeholder="Rechercher un projet ou une techno…" aria-label="Rechercher">
+      <div id="projFilters" class="pill-filters"></div>
+    </div>
+
+    <!-- grille -->
+    <div id="projectsGrid" class="projects-grid pro"></div>
+  </div>
+</section>
+
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section bg-dark">
+    <div class="container text-center">
+      <h2>Contactez-moi</h2>
+      <p>Disponible pour un stage de fin d’études en Intelligence Artificielle.</p>
+      <div class="social-links">
+        <a href="mailto:linda.chouati@outlook.fr"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/linda-chouati-8636a1162/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/lindoushmim" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2025 Linda Chouati — Tous droits réservés
+  </footer>
+
+  <!-- JS : ombre navbar + liens actifs -->
+  <script>
+    const navbar = document.querySelector('.navbar');
+    const onScroll = () => {
+      if (window.scrollY > 6) navbar.classList.add('is-scrolled');
+      else navbar.classList.remove('is-scrolled');
+    };
+    onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+    const sections = document.querySelectorAll('section[id], header#home');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#'+id));
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    sections.forEach(s => io.observe(s));
+  </script>
 </body>
-
 </html>
+
