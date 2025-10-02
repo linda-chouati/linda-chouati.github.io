@@ -94,7 +94,8 @@ img, video { max-width: 100%; height: auto; }
 .hero-tags span {
   font-size: 12.5px; padding: 6px 10px; border: 1px solid #eee; border-radius: 999px; background: #fff; color: #333;
 }
-.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 22px; }
+
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 22px; margin-bottom: 34px !important;}
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 12px 18px; border-radius: 999px; text-decoration: none; font-weight: 700;
@@ -105,7 +106,7 @@ img, video { max-width: 100%; height: auto; }
 .btn-ghost { background: #f9f7f2; color: #111; border: 2px solid #ede7d6; }
 .btn-ghost:hover { background: #fbfaf5; }
 
-.hero-stats { display: flex; gap: 28px; flex-wrap: wrap; margin: 18px 0 0; padding: 0; list-style: none; }
+.hero-stats { display: flex; gap: 28px; flex-wrap: wrap; margin: 40px 0 0; padding: 0; list-style: none;}
 .hero-stats li { display: flex; flex-direction: column; }
 .hero-stats strong { font-family: 'Playfair Display',serif; font-size: 22px; color: #111; }
 .hero-stats span { font-size: 13px; color: #666; }
