@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Linda Chouati — M2 Informatique (IA) | Portfolio</title>
-  <meta name="description" content="Étudiante M2 Informatique (IA) à l'UCBL. Projets en Deep Learning, Vision, NLP & XAI. Disponible pour un stage de fin d'études.">
-  <meta property="og:title" content="Linda Chouati — IA Portfolio">
-  <meta property="og:description" content="Projets IA (Vision, NLP, XAI) + démos & code. Disponible pour stage.">
-  <meta property="og:type" content="website">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/logoFond2.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css"/>
-  <script src="script.js" defer></script>
-
-  <!-- JSON-LD Person -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Linda Chouati",
-    "description":"Étudiante M2 Informatique (IA). Projets Vision, NLP, XAI.",
-    "sameAs":["https://github.com/lindoushmim","https://www.linkedin.com/in/linda-chouati-8636a1162/"]
-  }
-  </script>
-</head>
-<body>
-
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#home" class="logo">Linda Chouati</a>
-      <ul class="nav-links">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="cta-link" href="https://github.com/lindoushmim" target="_blank" rel="noreferrer">GitHub</a></li>
-      </ul>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/moi.png">
+    <title>Linda Chouati</title>
+    <meta name="description" content="Étudiante M2 Informatique IA à l'UCBL. Projets en Deep Learning, Vision, NLP XAI. Disponible pour un stage de fin d’études.">
+    <meta property="og:title" content="Linda Chouati IA Portfolio">
+    <meta property="og:description" content="Projets IA Vision, NLP, XAI démos code. Disponible pour stage.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- JSON-LD Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Linda Chouati",
+        "description": "Étudiante M2 Informatique IA. Projets Vision, NLP, XAI.",
+        "sameAs": [
+          "https://github.com/lindoushmim",
+          "https://www.linkedin.com/in/linda-chouati-8636a1162"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#home" class="logo">Linda Chouati</a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+          <span class="fa fa-bars"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="cta-link"><a href="https://github.com/lindoushmim" target="_blank" rel="noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+    </nav>
 
   <!-- ===== Hero ===== -->
   <header id="home" class="hero hero-elegant">
@@ -66,40 +70,39 @@
       <div class="hero-left">
         <span class="hero-badge">En recherche de stage de fin d’études</span>
         <h1 class="hero-title">LINDA CHOUATI</h1>
-        <p class="subtitle">Étudiante en Master 2 Informatique — IA</p>
+        <p class="subtitle">Étudiante en Master 2 Intelligence Artificielle — Informatique</p>
         <div class="divider"></div>
-        <blockquote class="quote">« Le talent est un cadeau, mais la persévérance est un choix. »</blockquote>
+        
+        <blockquote class="quote">« L’intelligence, c’est la capacité de s’adapter au changement.»</blockquote>
         <br>
 
-        <!-- tags stack/domaines -->
-        <div class="hero-tags">
-          <span>Python</span><span>PyTorch</span><span>OpenCV</span>
-          <span>NLP</span><span>Vision</span><span>XAI</span>
+        <div class="hero-tags" aria-label="Domaines">
+          <span>Machine Learning</span>
+          <span>Deep Learning</span>
+          <span>Data</span>
+          <span>NLP</span>
+          <span>XAI</span>
         </div>
 
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-          <a href="assets/cvLinda.pdf" class="btn btn-ghost" download>📄 Télécharger mon CV</a>
+          <a href="#projects" class="btn btn-primary" aria-label="Voir mes projets">Voir mes projets</a>
+          <a href="assets/cvLinda.pdf" class="btn btn-ghost" download aria-label="Télécharger mon CV">📄 Télécharger mon CV</a>
+          <br>
         </div>
-        <br>
 
-        <ul class="hero-stats">
+        <ul class="hero-stats" aria-label="Statistiques">
           <li><strong>8+</strong><span>projets publiés</span></li>
-          <li><strong>3</strong><span>domaines : IA, Vision, NLP</span></li>
+          <li><strong>2</strong><span>stages réalisés (Web • ML)</span></li>
           <li><strong>Fév–Août 2026</strong><span>Stage fin d’études — Lyon/Remote</span></li>
         </ul>
       </div>
 
       <div class="hero-right">
         <div class="feature-card photo-card">
-        <img src="assets/moi.png" alt="Photo de Linda Chouati" class="portrait" loading="lazy">
+          <img src="assets/moi.png" alt="Photo de Linda Chouati" class="portrait" loading="lazy">
         </div>
       </div>
     </div>
-    
-    <br>
-    <br>
-    <br>
 
     <div class="scroll-hint" aria-hidden="true">
       <span>Faites défiler</span>
@@ -111,169 +114,164 @@
     </svg>
   </header>
 
-    <!-- ===== À propos ===== -->
-    <section id="about" class="section about-section">
+  <!-- ===== À propos ===== -->
+  <section id="about" class="section about-section">
     <div class="container">
-        <h2 class="text-center">À propos de moi</h2>
-        <div class="about-card">
+      <h2 class="text-center">À propos de moi</h2>
+      <div class="about-card">
         <p>
-            Passionnée par l’intelligence artificielle, j’aime relever des défis techniques 
-            tout en gardant à cœur l’impact humain. Développement logiciel, IA explicable, 
-            apprentissage automatique… autant d’outils pour construire un monde plus intelligent, 
-            plus accessible et plus humain.
+          Ce qui m'attire dans l'intelligence artificielle, c'est sa capacité à apporter des réponses nouvelles à des problèmes complexes. 
+          Ce domaine, avec ses défis techniques, stimule ainsi ma curiosité.
         </p>
-        </div>
+        <p>
+          Mais au-delà du code, je crois aussi à l'impact humain. Mes expériences de bénévolat nourrissent cette conviction : apprendre, 
+          comprendre et aider sont pour moi des moteurs essentiels.
+        </p>
+        <p>
+          Développement logiciel, IA explicable, création de modèles d'apprentissage… Autant d'outils avec lesquels j'essaie de construire 
+          un monde plus intelligent, mais aussi plus accessible et plus humain.
+        </p>
+      </div>
 
-        <h3 class="text-center">🎓 Formation & Certifications</h3>
-        <div class="timeline">
-
+      <h3 class="text-center">🎓 Formation & Certifications</h3>
+      <div class="timeline">
         <div class="timeline-item">
-            <span class="icon">🎓</span>
-            <p><strong>Master en Intelligence Artificielle</strong> — Université Claude Bernard Lyon 1</p>
-            <br>
-        </div>
-
-        <div class="timeline-item">
-            <span class="icon">📜</span>
-            <p><strong>Supervised Machine Learning: Regression and Classification</strong><br>
-            Coursera (DeepLearning.AI & Stanford University) <br>
-            </p>
-            <br>
+          <span class="icon">🎓</span>
+          <p><strong>Master en Intelligence Artificielle</strong> — Université Claude Bernard Lyon 1</p>
         </div>
 
         <div class="timeline-item">
-            <span class="icon">🖥️</span>
-            <p><strong>Licence en Informatique</strong> — Université Claude Bernard Lyon 1</p>
-            <br>
+          <span class="icon">📜</span>
+          <p><strong>Supervised Machine Learning: Regression and Classification</strong><br>
+            Coursera (DeepLearning.AI & Stanford University)
+          </p>
         </div>
 
         <div class="timeline-item">
-            <span class="icon">📘</span>
-            <p><strong>Baccalauréat Scientifique (spé Physique)</strong> — Lycée du Parc</p>
+          <span class="icon">🖥️</span>
+          <p><strong>Licence en Informatique</strong> — Université Claude Bernard Lyon 1</p>
         </div>
 
+        <div class="timeline-item">
+          <span class="icon">📘</span>
+          <p><strong>Baccalauréat Scientifique (spé Physique)</strong> — Lycée du Parc</p>
         </div>
+      </div>
 
-        <div class="text-center">
+      <div class="text-center">
         <a href="assets/cvLinda.pdf" class="btn-outline" download>📄 Télécharger mon CV</a>
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
+  <!-- ===== Compétences ===== -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">Compétences</h2>
+      <div class="skills-grid pro">
+        <!-- Langages -->
+        <article class="skill-card pro">
+          <header>
+            <i class="fa-solid fa-code"></i>
+            <h3>Langages</h3>
+          </header>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">C/C++</span>
+            <span class="chip">Java</span>
+            <span class="chip">NetLogo</span>
+          </div>
+        </article>
 
+        <!-- Machine Learning -->
+        <article class="skill-card pro">
+          <header>
+            <i class="fa-solid fa-robot"></i>
+            <h3>Machine Learning</h3>
+          </header>
+          <div class="chips">
+            <span class="chip">PyTorch</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+          </div>
+        </article>
 
-<!-- ===== Compétences ===== -->
-<section id="skills" class="section bg-light">
-  <div class="container">
-    <h2 class="text-center">Compétences</h2>
+        <!-- Bases de données -->
+        <article class="skill-card pro">
+          <header>
+            <i class="fa-solid fa-database"></i>
+            <h3>Bases de données</h3>
+          </header>
+          <div class="chips">
+            <span class="chip">SQL</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Datalog</span>
+            <span class="chip">Doctrine</span>
+          </div>
+        </article>
 
-    <div class="skills-grid pro">
-      <!-- Langages -->
-      <article class="skill-card pro">
-        <header>
-          <i class="fa-solid fa-code"></i>
-          <h3>Langages</h3>
-        </header>
-        <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">C/C++</span>
-          <span class="chip">Java</span>
-          <span class="chip">NetLogo</span>
-        </div>
-      </article>
+        <!-- Développement Web -->
+        <article class="skill-card pro">
+          <header>
+            <i class="fa-solid fa-globe"></i>
+            <h3>Développement Web</h3>
+          </header>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">PHP</span>
+            <span class="chip">Symfony</span>
+          </div>
+        </article>
 
-      <!-- Machine Learning -->
-      <article class="skill-card pro">
-        <header>
-          <i class="fa-solid fa-robot"></i>
-          <h3>Machine Learning</h3>
-        </header>
-        <div class="chips">
-          <span class="chip">PyTorch</span>
-          <span class="chip">TensorFlow</span>
-          <span class="chip">Scikit‑learn</span>
-          <span class="chip">Pandas</span>
-          <span class="chip">NumPy</span>
-        </div>
-      </article>
+        <!-- Outils & Gestion -->
+        <article class="skill-card pro">
+          <header>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Outils & Gestion</h3>
+          </header>
+          <div class="chips">
+            <span class="chip">GitHub</span>
+            <span class="chip">GitLab</span>
+            <span class="chip">Agile</span>
+            <span class="chip">Scrum</span>
+          </div>
+        </article>
 
-      <!-- Bases de données -->
-      <article class="skill-card pro">
-        <header>
-          <i class="fa-solid fa-database"></i>
-          <h3>Bases de données</h3>
-        </header>
-        <div class="chips">
-          <span class="chip">SQL</span>
-          <span class="chip">MySQL</span>
-          <span class="chip">Datalog</span>
-          <span class="chip">Doctrine</span>
-        </div>
-      </article>
-
-      <!-- Dév Web -->
-      <article class="skill-card pro">
-        <header>
-          <i class="fa-solid fa-globe"></i>
-          <h3>Développement Web</h3>
-        </header>
-        <div class="chips">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">PHP</span>
-          <span class="chip">Symfony</span>
-        </div>
-      </article>
-
-      <!-- Outils & Gestion -->
-      <article class="skill-card pro">
-        <header>
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-          <h3>Outils & Gestion</h3>
-        </header>
-        <div class="chips">
-          <span class="chip">GitHub</span>
-          <span class="chip">GitLab</span>
-          <span class="chip">Agile</span>
-          <span class="chip">Scrum</span>
-        </div>
-      </article>
-
-      <!-- Langues -->
-      <article class="skill-card pro">
-        <header>
-          <i class="fa-solid fa-language"></i>
-          <h3>Langues</h3>
-        </header>
-        <div class="chips">
-          <span class="chip">Français</span>
-          <span class="chip">Anglais</span>
-          <span class="chip">Allemand</span>
-        </div>
-      </article>
+        <!-- Langues -->
+        <article class="skill-card pro">
+          <header>
+            <i class="fa-solid fa-language"></i>
+            <h3>Langues</h3>
+          </header>
+          <div class="chips">
+            <span class="chip">Français</span>
+            <span class="chip">Anglais</span>
+            <span class="chip">Allemand</span>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ===== Projets ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="text-center">Mes Projets</h2>
 
+      <!-- barre outils (recherche + filtres auto) -->
+      <div class="proj-toolbar">
+        <input id="projSearch" type="search" placeholder="Rechercher un projet ou une techno…" aria-label="Rechercher">
+        <div id="projFilters" class="pill-filters"></div>
+      </div>
 
-<!-- ===== Projets ===== -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2 class="text-center">Mes Projets</h2>
-
-    <!-- barre outils (recherche + filtres auto) -->
-    <div class="proj-toolbar">
-      <input id="projSearch" type="search" placeholder="Rechercher un projet ou une techno…" aria-label="Rechercher">
-      <div id="projFilters" class="pill-filters"></div>
+      <!-- grille -->
+      <div id="projectsGrid" class="projects-grid pro"></div>
     </div>
-
-    <!-- grille -->
-    <div id="projectsGrid" class="projects-grid pro"></div>
-  </div>
-</section>
-
+  </section>
 
   <!-- ===== Contact ===== -->
   <section id="contact" class="section bg-dark">
@@ -316,4 +314,3 @@
   </script>
 </body>
 </html>
-

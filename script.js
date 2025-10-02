@@ -56,6 +56,8 @@ const projects = [
         link: "https://github.com/lindoushmim/sokoban"
     }
 ];
+
+
 // ------- rendering dynamique & filtres -------
 (() => {
   const data = projects; // ton tableau existant
@@ -140,3 +142,14 @@ const projects = [
 
   render();
 })();
+
+// Burger menu responsive
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if(toggleBtn && navLinks) {
+    toggleBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+    });
+  }
+});
