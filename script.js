@@ -21,27 +21,35 @@ const projects = [
     featured: true
   },
   {
+    title: "NLP — Détection d’émotions (RNN)",
+    image: "assets/emotion.png", 
+    description: "Détection d’émotions dans des textes à l’aide d’un RNN (NLP).",
+    technologies: ["Python", "PyTorch", "NLP", "RNN"],
+    // finir 
+    featured: true
+  },
+  {
+    title: "Itinéraires & Émissions CO₂",
+    image: "assets/app_co2.png", 
+    description: "Planificateur multi-modes (voiture, vélo, marche) avec durée, distance et estimation des émissions de CO₂.",
+    technologies: ["GraphQL", "Java", "Spring Boot"],
+    link: "https://github.com/linda-chouati/Application-web-de-calcul-d-itin-raires-et-d-missions-de-CO-", 
+    featured: true
+  },
+  // {
+  //   title: "Framework ABA — Génération d’arguments",
+  //   image: "assets/aba.png",
+  //   description: "App web en Python : saisie d’un langage et génération des arguments, attaques et leur type (normal/reverse).",
+  //   technologies: ["Python", "Web UI", "ABA"],
+  //   link: "https://github.com/linda-chouati/aba_app",
+  //   featured: true
+  // },
+  {
     title: "Détection de Contours",
     image: "assets/edge.png",
     description: "Application détectant les contours d'une image avec des options de seuillage et filtrage.",
     technologies: ["C++", "OpenCV", "wxWidgets"],
     link: "https://github.com/lindoushmim/Image-Contour-Detection-Application",
-    featured: true
-  },
-  {
-    title: "Framework ABA — Génération d’arguments",
-    image: "assets/aba.png", // à mettre vraiment 
-    description: "App web en Python : saisie d’un langage et génération des arguments, attaques et leur type (normal/reverse).",
-    technologies: ["Python", "Web UI", "ABA"],
-    // quand dispo manque le lien git 
-    featured: true
-  },
-  {
-    title: "NLP — Détection d’émotions (RNN)",
-    image: "assets/emotion.png", // rajouter l image pas oublier 
-    description: "Détection d’émotions dans des textes à l’aide d’un RNN (NLP).",
-    technologies: ["Python", "PyTorch", "NLP", "RNN"],
-    // quand dispo manque le lien git 
     featured: true
   },
 
@@ -81,6 +89,7 @@ const projects = [
     technologies: ["Java"],
     link: "https://github.com/lindoushmim/sokoban"
   }
+
 ];
 
 
@@ -94,6 +103,7 @@ const projects = [
   const grid        = document.getElementById('projectsGrid');
   const filtersWrap = document.getElementById('projFilters'); 
   const searchInput = document.getElementById('projSearch');
+  const showAllBtn  = document.getElementById('showAllBtn');
 
   // --- 1) Compter les tags et trier par fréquence ---
   const counts = {};
@@ -112,7 +122,7 @@ const projects = [
   const extraTags = tagsSorted.filter(t => !fixedPrimary.includes(t));
 
   // --- 2) État (aucun tag sélectionné au chargement) ---
-  const active = { tag: null, q: '' };
+  const active = { tag: null, q: '', showAll: false };
 
   // --- 3) Construire la ligne de pills + le bouton Plus/Moins séparé ---
   //    -> on transforme #projFilters en barre de pills
@@ -166,10 +176,11 @@ const projects = [
   }
 
   // --- 4) Recherche ---
-  searchInput.addEventListener('input', (e) => {
-    active.q = e.target.value.trim().toLowerCase();
+  showAllBtn.addEventListener('click', () => {
+    active.showAll = !active.showAll;
     render();
   });
+
 
   // --- 5) Filtrage & rendu ---
   function passFilters(p){
@@ -185,7 +196,7 @@ const projects = [
 
   function card(p, idx){
     const li = document.createElement('article');
-    li.className = 'project-card pro' + (idx === 0 ? ' featured' : '');
+    li.className = 'project-card pro';
 
     const cover = document.createElement(p.link ? 'a' : 'div');
     cover.className = 'cover';
@@ -225,9 +236,12 @@ const projects = [
 
     const filtered = data.filter(passFilters);
 
-    // Par défaut = aucun tag + pas de recherche => featured only
-    const showFeaturedOnly = (!active.tag && !active.q);
+    // Par défaut => featured seulement S'IL n'y a ni tag ni recherche ni "tout afficher"
+    const showFeaturedOnly = (!active.tag && !active.q && !active.showAll);
     const toShow = showFeaturedOnly ? filtered.filter(p => p.featured) : filtered;
+
+    // maj libellé du bouton
+    showAllBtn.textContent = active.showAll ? 'Réduire (6 projets)' : 'Afficher tous les projets';
 
     toShow.forEach((p,i)=> grid.appendChild(card(p,i)));
 
@@ -237,7 +251,7 @@ const projects = [
       tip.style.marginTop = '8px';
       tip.style.color = '#666';
       tip.style.fontSize = '.95rem';
-      tip.textContent = "Astuce : choisissez une techno ou utilisez la recherche pour découvrir d’autres projets.";
+      tip.textContent = "Astuce : choisissez une techno, utilisez la recherche ou cliquez sur « Afficher tous les projets ».";
       grid.parentElement.appendChild(tip);
     }
   }

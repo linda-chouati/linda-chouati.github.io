@@ -286,6 +286,17 @@ img, video { max-width: 100%; height: auto; }
 .project-card.pro .btn-sm:hover { filter: brightness(.98); }
 .project-card.pro .btn-sm.ghost:hover { background: #fff; }
 
+.showall-btn {
+  align-self: flex-start;
+  background: #fff;
+  border: 1px solid #e9e5d6;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.showall-btn:hover { border-color: var(--primary); }
+
 /* =========================
    Projects toolbar: recherche + filtres + Plus/Moins
 ========================= */
