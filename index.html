@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <!-- JSON-LD Person -->
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -21,7 +21,7 @@
         "name": "Linda Chouati",
         "description": "Étudiante M2 Informatique IA. Projets Vision, NLP, XAI.",
         "sameAs": [
-          "https://github.com/lindoushmim",
+          "https://github.com/linda-chouati",
           "https://www.linkedin.com/in/linda-chouati-8636a1162"
         ]
       }
@@ -40,14 +40,13 @@
           <li><a href="#skills">Compétences</a></li>
           <li><a href="#projects">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="cta-link"><a href="https://github.com/lindoushmim" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li class="cta-link"><a href="https://github.com/linda-chouati" target="_blank" rel="noreferrer">GitHub</a></li>
         </ul>
       </div>
     </nav>
 
   <!-- ===== Hero ===== -->
   <header id="home" class="hero hero-elegant">
-    <!-- halo décoratif -->
     <svg class="hero-ornament" viewBox="0 0 600 600" aria-hidden="true">
       <defs>
         <linearGradient id="goldFade" x1="0" y1="0" x2="1" y2="1">
@@ -73,14 +72,15 @@
         <p class="subtitle">Étudiante en Master 2 Intelligence Artificielle — Informatique</p>
         <div class="divider"></div>
         
-        <blockquote class="quote">« L’intelligence, c’est la capacité de s’adapter au changement.»</blockquote>
+         <blockquote class="quote">« Une IA qui éclaire, pas qui remplace. »</blockquote>
         <br>
 
         <div class="hero-tags" aria-label="Domaines">
           <span>Machine Learning</span>
           <span>Deep Learning</span>
-          <span>Data</span>
-          <span>NLP</span>
+          <!-- <span>Data</span>
+          <span>NLP</span> -->
+          <span>Computer Vision</span>
           <span>XAI</span>
         </div>
 
@@ -98,7 +98,7 @@
 
       <div class="hero-right">
         <div class="feature-card photo-card">
-          <img src="assets/moi.png" alt="Photo de Linda Chouati" class="portrait" loading="lazy">
+          <img src="assets/moi.png" alt="Logo portfolio" class="portrait" loading="lazy">
         </div>
       </div>
     </div>
@@ -119,20 +119,17 @@
       <h2 class="text-center">À propos de moi</h2>
       <div class="about-card">
         <p>
-          Ce qui me plaît dans l’intelligence artificielle, c’est avant tout la découverte. J’aime comprendre comment des 
-          approches techniques peuvent aider à mieux saisir ou résoudre des problèmes concrets. Ce domaine me stimule, 
-          mais c’est surtout la curiosité et le plaisir d’apprendre qui m’accompagnent chaque jour.
+            J’ai découvert l’IA un peu par hasard, et elle ne m’a plus vraiment lâchée depuis. 
+            J’y ai trouvé un domaine où la technique peut servir à mieux comprendre et résoudre des problèmes concrets.
         </p>
         <p>
-          Au fil de mes études et de mes engagements bénévoles, j’ai aussi découvert que, derrière chaque projet,
-           il y a des personnes, des histoires et un impact humain réel. Écouter, comprendre et partager sont devenus 
-           pour moi des valeurs essentielles, tout comme réfléchir à la manière dont l’IA peut accompagner, soutenir et 
-           rendre les outils plus accessibles.
+          Bien plus, mon parcours universitaire m’a permis d’acquérir des compétences en Deep Learning, 
+          NLP, Computer Vision et en développement logiciel. Au-delà du code, ma démarche est guidée 
+          par l’impact humain. Écouter, comprendre et partager sont devenus pour moi des valeurs essentielles, 
+          tout comme réfléchir à la manière dont l’IA peut accompagner, soutenir et rendre les outils plus accessibles.
         </p>
         <p>
-          Aujourd’hui, je continue à explorer, tester et construire des projets autour du développement logiciel, 
-          de l’IA explicable et de l’apprentissage automatique — avec l’envie de progresser, tout en gardant cette 
-          curiosité et ce souci d’apporter quelque chose d’utile.
+          Aujourd’hui, je souhaite donc continuer à explorer, tester et construire des projets autour de l’IA.
         </p>
       </div>
 
@@ -185,10 +182,14 @@
           </div>
         </article>
       </div>
+      <br>
 
-      <div class="text-center">
-        <a href="assets/cvLinda.pdf" class="btn-outline" download>Télécharger mon CV</a>
-      </div>
+      <div class="cv-cta">
+      <a href="assets/cvLinda.pdf" class="btn btn-cv" download>
+        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+        Télécharger mon CV
+      </a>
+    </div>
 
     </div>
   </section>
@@ -197,6 +198,7 @@
   <section id="skills" class="section bg-light">
     <div class="container">
       <h2 class="text-center">Compétences</h2>
+      <br>
       <div class="skills-grid pro">
         <!-- Langages -->
         <article class="skill-card pro">
@@ -219,7 +221,6 @@
           </header>
           <div class="chips">
             <span class="chip">PyTorch</span>
-            <span class="chip">TensorFlow</span>
             <span class="chip">Scikit-learn</span>
             <span class="chip">Pandas</span>
             <span class="chip">NumPy</span>
@@ -250,7 +251,7 @@
             <span class="chip">CSS</span>
             <span class="chip">JavaScript</span>
             <span class="chip">PHP</span>
-            <span class="chip">Symfony</span>
+            <!-- <span class="chip">Symfony</span> -->
           </div>
         </article>
 
@@ -287,10 +288,16 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="text-center">Mes Projets</h2>
-
-      <!-- barre outils (recherche + filtres auto) -->
+      <br>
       <div class="proj-toolbar">
-        <input id="projSearch" type="search" placeholder="Rechercher un projet ou une techno…" aria-label="Rechercher">
+        <input id="projSearch" type="search"
+              placeholder="Rechercher un projet ou une techno…" aria-label="Rechercher">
+
+        <!-- ASTUCE (nouveau) -->
+        <p class="proj-hint">
+          Astuce : tape un mot-clé, utilise les filtres ou clique sur « Afficher tous les projets ».
+        </p>
+
         <div id="projFilters" class="pill-filters"></div>
         <button id="showAllBtn" class="showall-btn" type="button">Afficher tous les projets</button>
       </div>
@@ -308,14 +315,14 @@
       <div class="social-links">
         <a href="mailto:linda.chouati@outlook.fr"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/linda-chouati-8636a1162/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/lindoushmim" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/linda-chouati" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
       </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer>
-    © 2025 Linda Chouati — Tous droits réservés
+    © 2025 Linda Chouati
   </footer>
 
   <!-- JS : ombre navbar + liens actifs -->

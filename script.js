@@ -3,20 +3,20 @@
 // =======================
 
 const projects = [
-  // ---- Projets affichés par défaut ----
+  // ---- projet affichés par défaut ----
   {
     title: "Reconnaissance de Langage des Signes",
     image: "assets/langageSigne.png",
-    description: "Développement d'un programme Deep Learning afin de traduire les lettres du langage des signes.",
-    technologies: ["Python", "OpenCV", "Mediapipe"],
+    description: "Un programme qui traduit l'alphabet du langage des signes en lettres, en temps réel.",
+    technologies: ["Python", "OpenCV", "Mediapipe", , "Computer Vision"],
     link: "https://github.com/lindoushmim/Sign-Language-Recognition",
     featured: true
   },
   {
     title: "XAI - IA Explicable",
     image: "assets/xai.png",
-    description: "Interface interactive pour visualiser et interpréter les réseaux de neurones grâce aux méthodes post-hoc de l'IA explicable.",
-    technologies: ["Python", "Streamlit", "SHAP", "LIME"],
+    description: "Une interface d’expérimentation : charger un modèle, simuler, et explorer les explications visuelles.",
+    technologies: ["Python", "Streamlit", "XAI", "SHAP", "LIME"],
     link: "https://github.com/lindoushmim/Deep-Learning-Model-Interpretability-App",
     featured: true
   },
@@ -24,61 +24,63 @@ const projects = [
     title: "NLP — Détection d’émotions (RNN)",
     image: "assets/emotion.png", 
     description: "Détection d’émotions dans des textes à l’aide d’un RNN (NLP).",
-    technologies: ["Python", "PyTorch", "NLP", "RNN"],
-    // finir 
-    featured: true
+    technologies: ["Python", "NLP", "RNN"],
+    featured: true,
+    imageFit: "contain"  
   },
   {
     title: "Itinéraires & Émissions CO₂",
     image: "assets/app_co2.png", 
     description: "Planificateur multi-modes (voiture, vélo, marche) avec durée, distance et estimation des émissions de CO₂.",
-    technologies: ["GraphQL", "Java", "Spring Boot"],
+    technologies: ["GraphQL", "Java", "Spring Boot", "Web App"],
     link: "https://github.com/linda-chouati/Application-web-de-calcul-d-itin-raires-et-d-missions-de-CO-", 
     featured: true
   },
-  // {
-  //   title: "Framework ABA — Génération d’arguments",
-  //   image: "assets/aba.png",
-  //   description: "App web en Python : saisie d’un langage et génération des arguments, attaques et leur type (normal/reverse).",
-  //   technologies: ["Python", "Web UI", "ABA"],
-  //   link: "https://github.com/linda-chouati/aba_app",
-  //   featured: true
-  // },
+  {
+    title: "Admissibilty ",
+    image: "assets/hc_categorizer.png",
+    description: "Une application Python pour visualiser l’espace d’acceptabilité d’un cadre argumentatif.",
+    technologies: ["Python", "Streamlit", "Argumentation", "Visualization"],
+    link: "https://github.com/linda-chouati/acceptability-degree",
+    featured: true
+  },
   {
     title: "Détection de Contours",
     image: "assets/edge.png",
     description: "Application détectant les contours d'une image avec des options de seuillage et filtrage.",
-    technologies: ["C++", "OpenCV", "wxWidgets"],
+    technologies: ["C++", "OpenCV", "wxWidgets", "Computer Vision"],
     link: "https://github.com/lindoushmim/Image-Contour-Detection-Application",
     featured: true
   },
 
   // ---- Le reste des projets : ceux pas affichés des le depart ----
   {
-    title: "Machine Learning",
-    image: "assets/analyseDonnees.png",
-    description: ".",
-    technologies: ["Python", "Pandas", "Matplotlib"],
-    link: "https://github.com/lindoushmim/donneePollution"
-  },
-  {
     title: "Labyrinthe du Trésor",
     image: "assets/jeuLabyrinthe.png",
     description: "Un jeu où l'aventurier doit explorer un labyrinthe et atteindre le trésor tout en évitant les pièges et gardiens.",
     technologies: ["C", "C++", "SDL"],
-    link: "https://github.com/lindoushmim/LABYRINTHE-DU-TRESOR"
+    link: "https://github.com/lindoushmim/LABYRINTHE-DU-TRESOR",
+    imageFit: "contain"  
+  },
+  {
+    title: "Framework ABA — Génération d’arguments",
+    image: "assets/aba.png",
+    description: "Une application web qui génère automatiquement les arguments et attaques d’un cadre ABA à partir d’un langage et de règles définies par l’utilisateur.",
+    technologies: ["Python", "Web App", "ABA", "Argumentation"],
+    link: "https://github.com/linda-chouati/aba_app",
+    featured: false
   },
   {
     title: "Application de Filtrage d'Image",
     image: "assets/analyseImage.png",
     description: "Application permettant d'appliquer divers filtres (médian, gaussien, etc.) et de manipuler des histogrammes.",
-    technologies: ["C++", "wxWidgets", "OpenCV"],
+    technologies: ["C++", "OpenCV", "wxWidgets", "Computer Vision"],
     link: "https://github.com/lindoushmim/Image-Filtering-and-Histogram-Analysis-Tool"
   },
   {
     title: "Site de Danse",
     image: "assets/siteDanse.png",
-    description: "Un site de gestion pour une école de danse avec gestion des inscriptions.",
+    description: "Un page web pour une école de danse avec gestion des inscriptions.",
     technologies: ["HTML", "CSS", "PHP", "MySQL"],
     link: "https://github.com/lindoushmim/siteDanse"
   },
@@ -87,7 +89,7 @@ const projects = [
     image: "assets/sokoban.png",
     description: "Un jeu de réflexion, où le joueur pousse des caisses pour atteindre les objectifs.",
     technologies: ["Java"],
-    link: "https://github.com/lindoushmim/sokoban"
+    link: "https://github.com/linda-chouati/sukoban"
   }
 
 ];
@@ -145,7 +147,7 @@ const projects = [
     b.className = 'pill' + (label === active.tag ? ' is-active' : '');
     b.textContent = label;
     b.addEventListener('click', () => {
-      active.tag = (active.tag === label) ? null : label; // re-cliquer = désélection
+      active.tag = (active.tag === label) ? null : label; // désélection
       document.querySelectorAll('.pill').forEach(x => x.classList.remove('is-active'));
       if (active.tag) b.classList.add('is-active');
       render();
@@ -164,7 +166,6 @@ const projects = [
     moreBtn.setAttribute('aria-expanded', 'false');
     moreBar.appendChild(moreBtn);
 
-    // injecter les tags "extra" (cachés au départ)
     extraTags.forEach(t => extrasWrap.appendChild(makePill(t)));
 
     moreBtn.addEventListener('click', () => {
@@ -176,10 +177,15 @@ const projects = [
   }
 
   // --- 4) Recherche ---
-  showAllBtn.addEventListener('click', () => {
-    active.showAll = !active.showAll;
-    render();
-  });
+  searchInput.addEventListener('input', (e) => {
+      active.q = e.target.value.trim().toLowerCase();
+      render();
+    });
+
+    showAllBtn.addEventListener('click', () => {
+      active.showAll = !active.showAll;
+      render();
+    });
 
 
   // --- 5) Filtrage & rendu ---
@@ -201,7 +207,9 @@ const projects = [
     const cover = document.createElement(p.link ? 'a' : 'div');
     cover.className = 'cover';
     if (p.link) { cover.href = p.link; cover.target = '_blank'; cover.rel = 'noreferrer'; }
-    cover.innerHTML = `<img src="${p.image}" alt="${p.title}">`;
+    const fit = (p.imageFit === 'contain') ? 'contain' : 'cover';
+    cover.innerHTML = `<img src="${p.image}" alt="${p.title}" style="object-fit:${fit};background:#f9f9f9;">`;
+
     li.appendChild(cover);
 
     const body = document.createElement('div');
@@ -236,24 +244,12 @@ const projects = [
 
     const filtered = data.filter(passFilters);
 
-    // Par défaut => featured seulement S'IL n'y a ni tag ni recherche ni "tout afficher"
     const showFeaturedOnly = (!active.tag && !active.q && !active.showAll);
     const toShow = showFeaturedOnly ? filtered.filter(p => p.featured) : filtered;
 
-    // maj libellé du bouton
     showAllBtn.textContent = active.showAll ? 'Réduire (6 projets)' : 'Afficher tous les projets';
 
     toShow.forEach((p,i)=> grid.appendChild(card(p,i)));
-
-    if (showFeaturedOnly) {
-      const tip = document.createElement('p');
-      tip.className = 'projects-tip';
-      tip.style.marginTop = '8px';
-      tip.style.color = '#666';
-      tip.style.fontSize = '.95rem';
-      tip.textContent = "Astuce : choisissez une techno, utilisez la recherche ou cliquez sur « Afficher tous les projets ».";
-      grid.parentElement.appendChild(tip);
-    }
   }
 
   render();
